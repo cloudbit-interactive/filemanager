@@ -88,7 +88,7 @@
                             $item->ext = array_pop($item->name);
                             $item->name = join(".", $item->name);
                             $item->type = "file";
-                            if(in_array(strtolower($item->ext), ["jpg", "jpeg", "png","apng","svg","bmp","gif","ico"], true)){
+                            if(in_array(strtolower($item->ext), ["webp","jpg","jpeg","png","apng","svg","bmp","gif","ico"], true)){
                                 $dimensions = getimagesize($path.$file);
                                 $item->dimensions = new stdClass();
                                 $item->dimensions->width = $dimensions[0];
